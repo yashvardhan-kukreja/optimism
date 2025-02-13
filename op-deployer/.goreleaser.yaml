@@ -45,19 +45,19 @@ archives:
       - goos: windows
         format: zip
 
-dockers:
-  - id: default
-    goos: linux
-    goarch: amd64
-    dockerfile: Dockerfile.default
-    image_templates:
-      - "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:{{ .Tag }}"
-  - id: minimal
-    goos: linux
-    goarch: amd64
-    dockerfile: Dockerfile.minimal
-    image_templates:
-      - "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:{{ .Tag }}-minimal"
+# dockers:
+#   - id: default
+#     goos: linux
+#     goarch: amd64
+#     dockerfile: Dockerfile.default
+#     image_templates:
+#       - "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:{{ .Tag }}"
+#   - id: minimal
+#     goos: linux
+#     goarch: amd64
+#     dockerfile: Dockerfile.minimal
+#     image_templates:
+#       - "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:{{ .Tag }}-minimal"
 
 changelog:
   sort: asc
@@ -68,7 +68,7 @@ changelog:
 
 release:
   github:
-    owner: ethereum-optimism
+    owner: yashvardhan-kukreja
     name: optimism
   make_latest: false
 
