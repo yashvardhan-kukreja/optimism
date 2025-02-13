@@ -206,7 +206,8 @@ commands:
               CIRCLECI_TOOLS_PATH=$GITHUB_CLI_PATH/main.py
 
               cd $(dirname "$CIRCLECI_TOOLS_PATH")
-              pip install -r requirements.txt
+              sudo apt-get update && sudo apt-get install -y python3-pip
+              pip3 install -r requirements.txt
 
               echo "export CIRCLECI_TOOLS_PATH=$CIRCLECI_TOOLS_PATH" >> $BASH_ENV
 
@@ -1532,7 +1533,7 @@ jobs:
       # - gcp-oidc-authenticate:
       #     gcp_cred_config_file_path: /tmp/gcp_cred_config.json
       #     oidc_token_file_path: /tmp/oidc_token.json
-      # - checkout-with-mise
+      - checkout-with-mise
       # - run:
       #     name: Configure Docker
       #     command: |
