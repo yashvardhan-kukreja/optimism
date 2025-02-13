@@ -207,7 +207,7 @@ commands:
 
               cd $(dirname "$CIRCLECI_TOOLS_PATH")
               sudo apt-get update && sudo apt-get install -y python3-pip
-              pip3 install -r requirements.txt
+              pip install -r requirements.txt
 
               echo "export CIRCLECI_TOOLS_PATH=$CIRCLECI_TOOLS_PATH" >> $BASH_ENV
 
