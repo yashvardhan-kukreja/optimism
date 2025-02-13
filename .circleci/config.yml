@@ -1736,7 +1736,7 @@ workflows:
             tags:
               only: /^op-deployer.*/
             branches:
-              ignore: /.*/
+              only: yash/brew-test
           module: op-deployer
           brew_release: true
           context:
